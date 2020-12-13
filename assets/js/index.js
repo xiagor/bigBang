@@ -32,7 +32,7 @@ function renderAvatar(user) {
     }
 }
 
-$('#btnLogout').on('click', () => {
+$('#btnLogout').on('click', function () {
     let layer = layui.layer;
     layer.confirm('确认退出登录？', {
         icon: 3,

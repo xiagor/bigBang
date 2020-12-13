@@ -1,10 +1,10 @@
 $(function () {
-    $('#link_reg').on('click', () => {
+    $('#link_reg').on('click', function () {
         $('.loginBox').hide();
         $('.regBox').show();
     })
 
-    $('#link_login').on('click', () => {
+    $('#link_login').on('click', function () {
         $('.regBox').hide();
         $('.loginBox').show();
     })
@@ -22,7 +22,7 @@ $(function () {
         }
     });
     // 注册提交事件
-    $('#form_reg').on('submit', (e) => {
+    $('#form_reg').on('submit', function (e) {
         // 阻止默认提交行为
         e.preventDefault();
         $.ajax({
@@ -42,7 +42,7 @@ $(function () {
         })
     })
     // 登录提交事件
-    $('#form_login').on('submit', (e) => {
+    $('#form_login').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
             url: '/api/login',
