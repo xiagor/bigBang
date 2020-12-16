@@ -6,7 +6,8 @@ $.ajaxPrefilter((options) => {
     }
     options.complete = (res) => {
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-            location.href = '/login.html';
+            // 使用iframe框架时，子页面内跳转整个页面
+            window.parent.location.href = '/login.html';
             localStorage.removeItem('token');
         }
     }
